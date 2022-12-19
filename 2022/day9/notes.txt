@@ -1,0 +1,135 @@
+Y = 1
+X = 1
+
+current_x = 1
+max_x = 1
+
+
+L 3
+R 4
+L 5
+R 2
+
+R 4
+....H
+
+L 7
+
+X = 5
+// check se precisar aumentar o comprimento do grid
+if X - L <= 0
+x_length = x_length + (X - L)
+if 5 - 7 <= 0
+
+x_length = (L - X)
+x_length += (7 - 5)
+x_length = 7
+
+// corrigir posicao do H
+X = X + (7 - 5)
+X = 5 + 2
+X = 7
+
+// aplica L
+X = 1
+
+R 1
+X = X + 1
+X = 2
+
+R 7
+if X + R > x_length
+x_length = X + R
+x_length += (X + R - x_length)
+x_length += (2 + 7 - 7)
+x_length += (9 - 7)
+x_length = 7 + 2
+x_length = 9
+
+
+
+R 4 -> X + 4
+current_x = 5
+if max_x + X > max_x = max_x 5
+
+L 7
+current_x = 2
+if max_x - X <= 0
+
+R 4
+L 5 
+R 2
+
+
+....H
+
+
+
+if up/down to a position in the grid that doesnt exists, add 1 to Y
+if left/right to a position in the grid that doesnt exists, add 1 to X
+
+
+if L(quantity) > R(quantity) -> add difference of R - L to X
+
+......
+......
+......
+......
+s.....
+
+
+......
+......
+......
+......
+H.....
+
+
+ 12345
+1.....
+2.T.T.
+3..H..
+4.T.T.
+4.....
+
+    y,x
+H = 3,3
+T = 2,2
+T = 2,4
+T = 4,2
+T = 4,4
+
+
+if (1 <= abs(H.y - T.y) <= 2) and (1 <= abs(H.x - T.X) <= 2): 
+    is touching diagonally
+
+if 0 == abs(H.y - T.y) or abs(H.x - T.x):  
+    is touching vertically
+
+
+## How to move diagonally
+
+  12345   12345   12345   12345
+1 ..... | ..... | ..... | .....  
+2 ..H.. | ..H.. | ..T.. | ..T..  
+3 ..... | ..... | ..... | .....  
+4 .T... | ...T. | ...H. | .H...  
+5 ..... | ..... | ..... | .....  
+
+    y,x
+H = 2,3
+T = 4,2 -> 3,3
+
+H = 2,3
+T = 4,4 -> 3,3
+
+H = 4,4
+T = 2,3 -> 3,4
+
+H = 4,2
+T = 2,3 -> 3,2
+
+mover diogonal cima direita -> Y - 1, X + 1
+mover diogonal cima esquerda -> Y - 1, X - 1
+mover diogonal baixo direita -> Y + 1, X + 1
+mover diogonal baixo esquerda -> Y + 1, X - 1
