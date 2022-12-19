@@ -7,4 +7,3 @@ mkdir -p "$YEAR"
 mkdir -p "$YEAR/day$DAY"
 
 cp base.py "$YEAR/day$DAY/part_1.py"
-cp base.py "$YEAR/day$DAY/part_2.py"
